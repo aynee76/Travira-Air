@@ -16,7 +16,7 @@ body::-webkit-scrollbar-thumb {
 header {
     display: flex;
     align-items: center;
-    margin: 1rem 4rem;
+    padding: 1rem 4rem;
     justify-content: space-between;
 }
 
@@ -29,34 +29,41 @@ nav ul {
     display: flex;
     list-style: none;
     column-gap: 1rem;
-    font-size: 1rem;
 }
 
 nav li {
     padding: 1rem;
+    font-family: Poppins;
+    font-size: 1.3rem;
+    font-weight: 500;
+    line-height: 140%;
 }
 
 nav li:hover {
     color: #2F80ED;
     cursor: pointer;
-    text-transform: uppercase;
+    font-weight: 700;
 }
 
 .contactbtn {
     display: flex;
     padding: 1rem 2rem;
-    border: 1px solid black;
+    border: 1px solid #0E1035;
     background-color: white;
     color: #0E1035;
-    font-size: 1rem;
-    border-radius: 0.25rem;
+    font-size: 1.3rem;
+    border-radius: 1rem;
     cursor: pointer;
+}
+
+.ham {
+    display: none;
 }
 
 main {
     display: flex;
     position: relative;
-    margin-left: 4rem;
+    padding-left: 4rem;
     margin-top: 1rem;
     padding-bottom: 3rem;
     align-items: center;
@@ -92,11 +99,11 @@ main {
 
 .bookingbtn {
     padding: 1rem 2rem;
-    border: 1px solid black;
+    border: none;
     background-color: #0E1035;
     color: white;
-    font-size: 1rem;
-    border-radius: 0.25rem;
+    font-size: 1.3rem;
+    border-radius: 1rem;
     margin-top: 3rem;
     cursor: pointer;
 }
@@ -105,7 +112,7 @@ main {
     width: 45rem;
     height: 45rem;
     position: absolute;
-    top: -7rem;
+    top: -8rem;
     right: 0;
     z-index: -1;
 }
@@ -300,7 +307,7 @@ main {
     display: flex;
     flex-direction: column;
     padding: 3rem 4rem;
-    padding-bottom: 10rem;
+    padding-bottom: 15rem;
     background-image: url(image/plane.png);
     background-repeat: no-repeat;
     background-position: right;
@@ -326,6 +333,75 @@ main {
 
 .review-container {
     display: flex;
+    column-gap: 3rem;
+}
+
+.review {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 260px;
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 20px;
+    box-shadow: 30px 10px 50px 0px rgba(152, 149, 149, 0.30);
+    row-gap: 1.5rem;
+}
+
+.review:hover {
+    height: 234px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+}
+
+.profile-img {
+    width: 80px;
+    height: 80px;
+}
+
+.detail {
+    display: flex;
+    flex-direction: column;
+}
+
+.detail h4 {
+    color: #232323;
+    font-family: Inter;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: 0.28px;
+}
+
+.detail small {
+    color: #9C9C9C;
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 28px;
+}
+
+.comment {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+}
+
+.comment p {
+    color: #9C9C9C;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    /* line-height: 20px; */
+}
+
+.review:hover .comment p{
+    color: #0E1035;
 }
 
 .testimony aside {
@@ -339,15 +415,75 @@ main {
     padding: 4rem;
     border-radius: 50px;
     position: absolute;
-    top: 30rem;
+    top: 39rem;
     background-image: url(image/waves.png);
     background-position: right;
     background-repeat: no-repeat;
     background-size: 40% 100%;
 }
 
+.testimony aside h3 {
+    font-family: Poppins;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 120%;
+    width: 270px;
+}
+
+.contactbtnbg {
+    display: flex;
+    padding: 1rem 2rem;
+    background-color: white;
+    color: #0E1035;
+    font-size: 1.3rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    border: none;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%;
+}
+
 footer {
     display: flex;
     align-items: center;
-    padding-top: 10rem;
+    justify-content: space-between;
+    padding: 10rem 4rem 3rem 4rem;
+}
+
+footer article {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+}
+
+footer article h4 {
+    color: #0E1035;
+        font-family: Inter;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 140%;
+        /* 33.6px */
+}
+
+footer article ul {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    color: #0E1035;
+        font-family: Inter;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%;
+        cursor: pointer;
+        
+        list-style: none;
+        /* 24px */
+}
+
+.office {
+    width: 350px;
 }
