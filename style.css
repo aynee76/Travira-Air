@@ -16,7 +16,7 @@ body::-webkit-scrollbar-thumb {
 header {
     display: flex;
     align-items: center;
-    padding: 1rem 4rem;
+    padding: 2rem 4rem;
     justify-content: space-between;
 }
 
@@ -64,7 +64,7 @@ main {
     display: flex;
     position: relative;
     padding-left: 4rem;
-    margin-top: 1rem;
+    /* margin-top: 1rem; */
     padding-bottom: 3rem;
     align-items: center;
 }
@@ -264,6 +264,7 @@ main {
     overflow-x: auto;
     column-gap: 2rem;
     padding: 1rem 0;
+    
 }
 
 .hanger article {
@@ -279,6 +280,8 @@ main {
     justify-content: center;
     align-items: center;
     background-image: url(/image/sky.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
     border-top-right-radius: 50px;
     border-top-left-radius: 50px;
 }
@@ -373,7 +376,6 @@ main {
     font-family: Inter;
     font-size: 28px;
     font-weight: 700;
-    line-height: 150%;
     letter-spacing: 0.28px;
 }
 
@@ -382,7 +384,6 @@ main {
     font-family: Inter;
     font-size: 14px;
     font-weight: 600;
-    line-height: 28px;
 }
 
 .comment {
@@ -395,19 +396,17 @@ main {
     color: #9C9C9C;
     font-family: Poppins;
     font-size: 20px;
-    font-style: normal;
     font-weight: 400;
-    /* line-height: 20px; */
 }
 
 .review:hover .comment p{
     color: #0E1035;
 }
 
-.testimony aside {
+.box {
     height: 202px;
     display: flex;
-    width: 90%;
+    width: 85%;
     justify-content: space-between;
     align-items: center;
     background-color: #0E1035;
@@ -422,7 +421,7 @@ main {
     background-size: 40% 100%;
 }
 
-.testimony aside h3 {
+.box h3 {
     font-family: Poppins;
     font-size: 40px;
     font-weight: 600;
@@ -445,6 +444,10 @@ main {
     line-height: 140%;
 }
 
+.box-mobile {
+    display: none;
+}
+
 footer {
     display: flex;
     align-items: center;
@@ -452,13 +455,19 @@ footer {
     padding: 10rem 4rem 3rem 4rem;
 }
 
-footer article {
+.sub-footer {
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+}
+
+.list {
     display: flex;
     flex-direction: column;
     row-gap: 1.5rem;
 }
 
-footer article h4 {
+.list h4 {
     color: #0E1035;
         font-family: Inter;
         font-size: 24px;
@@ -468,22 +477,683 @@ footer article h4 {
         /* 33.6px */
 }
 
-footer article ul {
+.list ul {
     display: flex;
     flex-direction: column;
     row-gap: 1rem;
     color: #0E1035;
-        font-family: Inter;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 150%;
-        cursor: pointer;
-        
-        list-style: none;
-        /* 24px */
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 150%;
+    cursor: pointer;     
+    list-style: none;
 }
 
 .office {
     width: 350px;
+}
+
+
+/* responsiveness for tablets and mini-pc  */
+@media (min-width: 769px) and (max-width: 1279px) {
+    header {
+    display: flex;
+    align-items: center;
+    padding: 1rem 4rem;
+    justify-content: space-between;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    column-gap: 1rem;
+}
+
+nav li {
+    padding: 1rem;
+    font-family: Poppins;
+    font-size: 1.3rem;
+    font-weight: 500;
+    line-height: 140%;
+}
+
+nav li:hover {
+    color: #2F80ED;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.ham {
+    display: none;
+}
+
+.cta h1 {
+    font-size: 56px;
+}
+
+.cta p {
+    width: 26rem;
+    font-size: 1rem;
+    color: #676767;
+    font-family: "Inter";
+    line-height: 150%;
+}
+
+.herobg {
+    display: none;
+}
+
+.service {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 4rem 5rem 4rem;
+    background-color: #0E1035;
+    color: white;
+    row-gap: 4rem;
+}
+
+.company {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    row-gap: 2rem;
+}
+
+.company h3 {
+    font-family: "Poppins";
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.brand {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.lg {
+    height: 3.5rem;
+}
+
+.function {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 2rem;
+}
+
+.plane {
+    width: 400px;
+    height: 400px;
+}
+
+.mission {
+    display: flex;
+    flex-direction: column;
+    /* width: 600px; */
+    row-gap: 4rem;
+}
+
+.desc {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    align-items: center;
+}
+
+.desc h2 {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.desc p {
+    text-align: center;
+    color: #BDBBBB;
+    font-family: "Inter";
+    font-size: 20px;
+    font-weight: 500;
+    width: fit-content;
+    line-height: 150%;
+}
+
+.offers {
+    display: flex;
+    justify-content: space-between;
+}
+
+.safety {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 2rem;
+    padding: 3rem 4rem;
+}
+
+.safety p {
+    color: #676767;
+}
+
+.safety h2 {
+    font-family: "Inter";
+    font-size: 56px;
+    font-weight: 700;
+    color: #0E1035;
+}
+
+.safety ul {
+    color: #0E1035;
+}
+
+.fleet {
+    display: flex;
+    flex-direction: column;
+    row-gap: 4rem;
+    padding: 3rem 0 3rem 4rem;
+}
+
+.heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 2rem;
+}
+
+.heading h2 {
+    color: #0E1035;
+    font-family: "Inter";
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.heading p {
+    color: #676767;
+    text-align: center;
+    font-family: "Inter";
+    font-size: 20px;
+    font-weight: 500;
+    width: 38rem;
+    line-height: 150%;
+}
+
+.flightbg {
+    width: 500px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(/image/sky.png);
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+}
+
+.flight {
+    width: 400px;
+    height: 212px;
+}
+
+.text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    width: 500px;
+    height: 100px;
+    color: #0E1035;
+    font-family: Inter;
+    font-size: 30px;
+    font-weight: 600;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+
+.testimony {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 4rem;
+    padding-bottom: 15rem;
+    background-image: url(image/plane.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 40% 100%;
+    position: relative;
+}
+
+.testimonial {
+    display: flex;
+    flex-direction: column;
+}
+
+.testimonial h2 {
+    width: 648px;
+    height: 199.027px;
+    color: #232323;
+    font-family: "Inter";
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: 0.64px;
+}
+
+.review-container {
+    display: flex;
+    column-gap: 3rem;
+}
+
+.review {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 260px;
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 20px;
+    box-shadow: 30px 10px 50px 0px rgba(152, 149, 149, 0.30);
+    row-gap: 1.5rem;
+}
+
+.review:hover {
+    height: 234px;
+}
+
+.box h3 {
+    font-family: Poppins;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 120%;
+    width: 270px;
+}
+
+.box-mobile {
+    display: none;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+    padding: 10rem 4rem 3rem 4rem;
+}
+
+.sub-footer {
+    display: flex;
+    width: 90%;
+    column-gap: 1rem;
+}
+
+.office {
+    width: 350px;
+}
+}
+
+
+/* resposiveness for mobile  */
+@media (max-width: 768px) {
+    header {
+            display: flex;
+            align-items: center;
+            padding: 2rem;
+            justify-content: space-between;
+        }
+    
+        .logo {
+            width: 5rem;
+            height: 5rem;
+        }
+    
+        nav ul {
+            display: none;
+        }
+    
+        .contactbtn {
+            display: none;
+        }
+    
+        .ham {
+            display: block;
+        }
+    
+        main {
+            display: flex;
+            padding: 2rem;
+            align-items: center;
+        }
+    
+        .cta {
+            display: flex;
+            flex-direction: column;
+            row-gap: 2rem;
+            width: 100%;
+        }
+    
+        .cta h1 {
+            font-size: 38px;
+            width: fit-content;
+        }
+    
+        .cta p {
+            width: fit-content;
+            font-size: 1rem;
+        }
+    
+        .bookingbtn {
+            padding: 1rem;
+            font-size: 1rem;
+            border-radius: 0.5rem;
+        }
+    
+        .herobg {
+            display: none;
+        }
+    
+        .service {
+            display: flex;
+            flex-direction: column;
+            padding: 2rem;
+            row-gap: 4rem;
+        }
+    
+        .company {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            row-gap: 2rem;
+        }
+    
+        .company h3 {
+            font-family: "Poppins";
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-align: center;
+        }
+    
+        .brand {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 2rem;
+        }
+    
+        .lg {
+            width: 7rem;
+            height: 3.5rem;
+        }
+    
+        .function {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        .plane {
+            width: 200px;
+            height: 200px;
+        }
+    
+        .mission {
+            display: flex;
+            flex-direction: column;
+            row-gap: 2rem;
+        }
+    
+        .desc {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            row-gap: 1rem;
+        }
+    
+        .desc h2 {
+            font-family: Inter;
+            font-size: 36px;
+            font-weight: 700;
+        }
+    
+        .desc p {
+            font-size: 14px;
+            width: fit-content;
+            text-align: center;
+        }
+    
+        .offers {
+            display: flex;
+            column-gap: 1rem;
+            justify-content: space-between;
+        }
+    
+        .offers ul {
+            display: flex;
+            flex-direction: column;
+            row-gap: 1.5rem;
+            text-decoration: underline;
+            list-style: none;
+            font-size: 12px;
+            cursor: pointer;
+            font-family: "Inter";
+            font-weight: 700;
+        }
+    
+        .safety {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            row-gap: 2rem;
+            padding: 2rem;
+        }
+    
+        .safety p {
+            color: #676767;
+        }
+    
+        .safety h2 {
+            color: #0E1035;
+        }
+    
+        .safety ul {
+            color: #0E1035;
+        }
+    
+        .fleet {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            row-gap: 4rem;
+            padding: 3rem 2rem;
+        }
+    
+        .heading {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            row-gap: 2rem;
+            max-width: fit-content;
+        }
+    
+        .heading h2 {
+            font-size: 36px;
+            font-style: normal;
+            font-weight: 700;
+        }
+    
+        .heading p {
+            font-size: 16px;
+            width: fit-content;
+        }
+    
+        .hanger {
+            display: flex;
+            flex-direction: column;
+            row-gap: 2rem;
+            
+        }
+    
+        .hanger article {
+            box-shadow: 0px 4px 50px 0px #74747440;
+            border-radius: 20px;
+            width: 255px;
+        }
+    
+        .flightbg {
+            width: 255px;
+            height: 180px;
+            border-top-right-radius: 20px;
+            border-top-left-radius: 20px;
+        }
+    
+        .flight {
+            width: 200px;
+            height: 112px;
+        }
+    
+        .text {
+            width: 255px;
+            height: 50px;
+            font-size: 16px;
+            border-bottom-right-radius: 20px;
+            border-bottom-left-radius: 20px;
+        }
+    
+        .testimony {
+            padding: 3rem 2rem;
+        }
+    
+        .testimonial {
+            display: flex;
+            flex-direction: column;
+            row-gap: 2rem;
+        }
+    
+        .testimonial h2 {
+            width: fit-content;
+            height: fit-content;
+            font-size: 36px;
+        }
+    
+        .review-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+    
+        .review {
+            width: 250px;
+            height: 200px;
+        }
+    
+        .review:focus {
+            height: 150px;
+        }
+    
+        .profile-img {
+            width: 40px;
+            height: 40px;
+        }
+    
+        .detail {
+            display: flex;
+            flex-direction: column;
+        }
+    
+        .detail h4 {
+            color: #232323;
+            font-family: Inter;
+            font-size: 16px;
+        }
+    
+        .detail small {
+            color: #9C9C9C;
+            font-family: Inter;
+            font-size: 10px;
+            font-weight: 600;
+        }
+    
+        .comment {
+            display: flex;
+            flex-direction: column;
+            row-gap: 0.5rem;
+        }
+    
+        .comment p {
+            color: #9C9C9C;
+            font-family: Poppins;
+            font-size: 14px;
+            font-weight: 400;
+        }
+    
+        .review:hover .comment p {
+            color: #0E1035;
+        }
+    
+        .box {
+            display: none;           
+        }
+
+        .box-mobile {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #0E1035;
+            color: #FFF;
+            padding: 1rem 2rem;
+            height: 150px;
+            background-image: url(image/waves.png);
+            background-position: right;
+            background-repeat: no-repeat;
+            background-size: 40% 100%;
+        }
+    
+        .box-mobile h3 {
+            font-family: Poppins;
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 120%;
+            width: 150px;
+        }
+    
+        .contactbtnbg {
+            padding: 1rem;
+            font-size: 0.8rem;
+            border-radius: 0.5rem;
+        }
+    
+        footer {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            row-gap: 1.5rem;
+            padding: 2rem;
+        }
+
+        .sub-footer {
+            display: flex;
+            flex-direction: column;
+            row-gap: 1.5rem;
+        }
+    
+        .list {
+            display: flex;
+            flex-direction: column;
+            row-gap: 1rem;
+        }
+    
+        .list h4 {
+            font-size: 20px;
+        }
+    
+        .list ul {
+            display: flex;
+            flex-direction: column;
+            row-gap: 0.5rem;
+        }
+    
+        .office {
+            width: 250px;
+        }
 }
