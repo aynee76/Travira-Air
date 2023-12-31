@@ -8,6 +8,8 @@ Clone or download this repository and run with a local server of open index.html
 
 ## Preview
 
+https://comfy-bienenstitch-0909df.netlify.app/
+
 ## Prequisite
 
 - Your browser version must be recent for a better experience
